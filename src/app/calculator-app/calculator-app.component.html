@@ -1,0 +1,10 @@
+<div>
+  <h1>Angular Calculator</h1>
+  <input [(ngModel)]="expression" (input)="validateExpression()" placeholder="Enter an expression" />
+  <div *ngIf="error" style="color: red;">{{ error }}</div>
+  <div *ngIf="!error">Result: {{ result  | json }}</div>
+  <h3>History</h3>
+  <ul>
+    <li *ngFor="let entry of history">{{ entry  }}</li>
+  </ul>
+</div>
